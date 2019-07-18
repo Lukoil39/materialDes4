@@ -1,8 +1,10 @@
 package ru.leonidivankin.materialdesignlesson4;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -15,6 +17,8 @@ import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String TAG = "MainActivity";
 
     private Toolbar toolbar;
     private DrawerLayout drawer;
@@ -38,6 +42,28 @@ public class MainActivity extends AppCompatActivity
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        
+        drawer.addDrawerListener(new DrawerLayout.DrawerListener() {
+            @Override
+            public void onDrawerSlide(@NonNull View view, float v) {
+                Log.d(TAG, "onDrawerSlide: ");
+            }
+
+            @Override
+            public void onDrawerOpened(@NonNull View view) {
+                Log.d(TAG, "onDrawerOpened: ");
+            }
+
+            @Override
+            public void onDrawerClosed(@NonNull View view) {
+                Log.d(TAG, "onDrawerClosed: ");
+            }
+
+            @Override
+            public void onDrawerStateChanged(int i) {
+                Log.d(TAG, "onDrawerStateChanged: ");
+            }
+        });
     }
 
     private void initFab() {
@@ -58,7 +84,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -106,6 +131,9 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_send:
 
+                break;
+            case R.id.nav_camera1:
+                Log.d(TAG, "onNavigationItemSelected: ");
                 break;
         }
 

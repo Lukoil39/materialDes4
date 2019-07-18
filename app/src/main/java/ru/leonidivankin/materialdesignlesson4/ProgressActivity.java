@@ -17,6 +17,9 @@ public class ProgressActivity extends AppCompatActivity {
 
         progressBarRound = findViewById(R.id.progress_round_activity_progress);
         progressBarLine = findViewById(R.id.progress_line_activity_progress);
+
+        progressBarLine.setMax(100);
+        progressBarLine.setProgress(70);
     }
 
     public void show(View view) {
