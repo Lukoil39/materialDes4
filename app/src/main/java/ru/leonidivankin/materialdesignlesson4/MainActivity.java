@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         switch (id) {
@@ -131,9 +130,6 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_send:
 
-                break;
-            case R.id.nav_camera1:
-                Log.d(TAG, "onNavigationItemSelected: ");
                 break;
         }
 

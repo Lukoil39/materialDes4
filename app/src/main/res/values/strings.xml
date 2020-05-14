@@ -7,4 +7,7 @@
     <string name="nav_header_subtitle">применяется от дождя</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="show">show</string>
+    <string name="hide">hide</string>
+    <string name="little_snow">Снежинка</string>
 </resources>
