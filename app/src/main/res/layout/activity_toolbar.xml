@@ -35,5 +35,4 @@
         android:indeterminate="true"
         app:layout_constraintTop_toTopOf="@+id/appBarLayout"
         tools:layout_editor_absoluteX="0dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
